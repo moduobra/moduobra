@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Contrato</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900 p-8">
+    <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow-md">
+        <h1 class="text-2xl font-bold mb-4">Generar Contrato</h1>
+        <form method="POST">
+            <label class="block mb-2 font-medium">Selecciona un trabajador:</label>
+            <select name="trabajador" class="w-full border p-2 rounded mb-4">
+                {% for nombre in nombres %}
+                    <option value="{{ nombre }}">{{ nombre }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generar Contrato</button>
+        </form>
+    </div>
+</body>
+</html>

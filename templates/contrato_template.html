@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        h1 { text-align: center; }
+        .seccion { margin-bottom: 20px; }
+        .firma { margin-top: 50px; display: flex; justify-content: space-between; }
+        .firma div { width: 45%; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Contrato de Trabajo</h1>
+
+    <div class="seccion">
+        En Santiago, {{ FECHA_CONTRATO }}, entre <strong>ALME OBRAS SPA</strong>, representada por Daniela Alcaide Riveros, y <strong>{{ NOMBRE_COMPLETO }}</strong>, RUT {{ RUT }}, nacido el {{ FECHA_NACIMIENTO }}, domiciliado en {{ DIRECCION }}, se celebra el siguiente contrato:
+    </div>
+
+    <div class="seccion">
+        <strong>1. Cargo:</strong> {{ CARGO }} en la obra "{{ OBRA }}" ubicada en {{ DIRECCION_OBRA }}.
+    </div>
+
+    <div class="seccion">
+        <strong>2. Jornada:</strong> Lunes a Viernes, 08:00 a 18:00 hrs. con 1 hora de colación.
+    </div>
+
+    <div class="seccion">
+        <strong>3. Remuneración:</strong>
+        <ul>
+            <li>Sueldo Base: ${{ SUELDO_BASE }}</li>
+            <li>Colación: ${{ COLACION }}</li>
+            <li>Movilización: ${{ MOVILIZACION }}</li>
+        </ul>
+    </div>
+
+    <div class="seccion">
+        <strong>4. Inicio:</strong> Desde el {{ FECHA_INGRESO }} hasta el {{ FECHA_TERMINO }}.
+    </div>
+
+    <div class="firma">
+        <div>
+            ___________________________<br>
+            Empleador
+        </div>
+        <div>
+            ___________________________<br>
+            Trabajador
+        </div>
+    </div>
+</body>
+</html>
