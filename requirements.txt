@@ -3,3 +3,4 @@ flask
 pandas
 jinja2
 weasyprint
+gunicorn
